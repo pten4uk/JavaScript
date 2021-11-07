@@ -1,0 +1,12 @@
+#mydiv {
+    position: absolute;
+    width: 20%;
+    height: 15%;
+    line-height: 170%;
+    cursor: grab;
+    user-select: none;
+    text-align: center;
+    font-size: 50px;
+    background-color: crimson;
+    margin: 15px;
+}
