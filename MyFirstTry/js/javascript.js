@@ -1,19 +1,30 @@
 `use strict`;
 
-console.log(window)
+let urls = [
+    `photos/1.jpg`, 
+    `photos/2.jpg`, 
+    `photos/3.jpg`, 
+    `photos/4.jpg`, 
+    `photos/5.jpeg`
+]
 
-document.querySelector(`#mydiv`).getAttribute(`margin`)
+let left = document.querySelector(`.pointer.left-pointer`);
+let right = document.querySelector(`.pointer.right-pointer`);
+let photo = document.querySelector(`.photo-space`);
+let counter = 0;
 
-let offsetX;
-let offsetY;
 
-mydiv.addEventListener('dragstart', (e) => {
-    console.log(mydiv.getAttribute(`style`))
-    offsetX = e.offsetX;
-    offsetY = e.offsetY;
-})
+left.addEventListener(`click`, () => {
+    counter -= 1;
+    if (counter < 0) counter = urls.length -1;
+    photo.style.backgroundImage = `url(${urls[counter]})`;
+    console.log(photo.clientWidth);
+    console.log(counter)
+});
 
-mydiv.addEventListener('dragend', (e) => {
-    mydiv.style.top = (e.pageY - offsetY) + `px`
-    mydiv.style.left = (e.pageX - offsetX) + `px`
-})
+right.addEventListener(`click`, () => {
+    counter += 1;
+    if (counter >= urls.length) counter = 0;
+    photo.style.backgroundImage = `url(${urls[counter]})`;
+    console.log(counter) 
+});
