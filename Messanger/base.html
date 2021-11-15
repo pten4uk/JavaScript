@@ -5,16 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/block-avatars.css">
+    <link rel="stylesheet" href="css/messages.css">
 </head>
 <body>
 
     <div class="container">
         <div class="main-block">
-          
+
+            <div class="avatars">
+                <li class="avatar-block"><div class="avatar-circle"><img src="photo/1.jpg" alt=""></div></li>
+                <li class="avatar-block"><div class="avatar-circle"><img src="photo/2.jpg" alt=""></div></li>
+                <li class="avatar-block"><div class="avatar-circle"><img src="photo/3.jpg" alt=""></div></li>
+                <li class="avatar-block"><div class="avatar-circle"><img src="photo/4.jpg" alt=""></div></li>
+            </div>
+
+            <div class="messages">
+                <div class="block-textarea-bottom">
+                    <textarea class="textarea" 
+                                placeholder="Введите сообщение..."></textarea>
+                    <button class="btn-send">
+                        <img src="icons/send-button.png" alt="">
+                    </button>
+                </div>
+                
+                <div class="block-messages">
+                    <div class="textarea-messages">
+                        <div class="block-message">
+                            <div id="other-message">Привет</div>
+                        </div>
+                        <div class="block-message">
+                            <div id="self-message">Привет</div>
+                        </div>
+                    </div>
+                </div>
+
+          </div>
+
         </div>
     </div>
 
-    <link rel="stylesheet" href="css/styles.css">
     <script src="js/javascript.js"></script>
 </body>
 </html>
