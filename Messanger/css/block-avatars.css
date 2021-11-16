@@ -10,15 +10,7 @@
     z-index: 10;
     overflow-y: scroll;
     overflow-x: hidden;
-}
-
-.avatars::-webkit-scrollbar {
-    width: 4px;
-}
-
-.avatars::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 64, 255, 0.6);
-    border-radius: 10px;
+    direction: rtl;
 }
 
 .avatar-block {
@@ -28,7 +20,7 @@
 
 .avatar-circle {
     position: relative;
-    top: 5px;
+    top: 10px;
     display: flex;
     margin: 0 auto;
     width: 120px;
@@ -51,6 +43,15 @@
 }
 
 .avatar-circle:hover {
+    width: 130px;
+    height: 130px;
+}
+
+.avatar-block.selected {
+    background-color: blue;
+}
+
+.avatar-block.selected .avatar-circle {
     width: 130px;
     height: 130px;
 }

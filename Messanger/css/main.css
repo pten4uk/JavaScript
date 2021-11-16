@@ -8,6 +8,7 @@
     position: relative;
     max-width: 100%;
     max-height: 100vh;
+    user-select: none;
 }
 
 .main-block {
@@ -26,4 +27,17 @@
     box-shadow: 0 0 5px rgba(0,0,0,.3);
 
     overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 64, 255, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    margin: 5px;
 }
