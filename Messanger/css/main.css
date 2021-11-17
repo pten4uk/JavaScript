@@ -1,5 +1,5 @@
 * {
-    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -24,7 +24,7 @@
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 10px;
 
-    box-shadow: 0 0 5px rgba(0,0,0,.3);
+  /*   box-shadow: 0 0 5px rgba(0,0,0,.3); */
 
     overflow: hidden;
 }
@@ -34,7 +34,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 64, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
 }
 
