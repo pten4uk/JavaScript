@@ -6,6 +6,8 @@ const ctx = canvas.getContext('2d');
 let w = canvas.width = innerWidth;
 let h = canvas.height = innerHeight;
 let particleArray = [];
+let moveX = 20;
+let moveY = 50;
 
 document.body.append(canvas);
 canvas.style.background = 'radial-gradient(blue, black)'
@@ -23,15 +25,16 @@ canvas.addEventListener('mousemove', event => {
 
 ctx.fillStyle = 'white'
 ctx.font = '90px Verdana';
-ctx.fillText('A', 0, 40);
+ctx.textBaseline = 'top'
+ctx.fillText('Мастер', 0, 0);
 
-const textCoords = ctx.getImageData(0,0,100,100);
+const textCoords = ctx.getImageData(0,0,ctx.measureText('Мастер').width, 200);
 
 class Particle {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.size = 3;
+        this.size = 2;
         this.baseX = this.x;
         this.baseY = this.y;
         this.dencity = Math.random() * 30 + 1;
@@ -59,11 +62,11 @@ class Particle {
             this.x -= directionX;
             this.y -= directionY;
         } else {
-            if (this.x != this.baseX) {
+            if (this.x !== this.baseX) {
                 let dx = this.x - this.baseX;
                 this.x -= dx/60;
             }
-            if (this.y != this.baseY) {
+            if (this.y !== this.baseY) {
                 let dy = this.y - this.baseY;
                 this.y -= dy/60;
             }
@@ -73,10 +76,14 @@ class Particle {
 
 function init() {
     particleArray = [];
-    for (let i = 0; i < 1000; i++) {
-        let x = Math.random() * w;
-        let y = Math.random() * h;
-        particleArray.push(new Particle(x, y))
+    for (let x = 0; x < textCoords.width; x++) {
+        for (let y = 0; y < textCoords.height; y++) {
+            if (textCoords.data[y * 4 * textCoords.width + x * 4 + 3] > 128) {
+                let posX = x + moveX;
+                let posY = y + moveY;
+                particleArray.push(new Particle(posX * 5, posY * 5))
+            }
+        }
     }
 }
 init();
