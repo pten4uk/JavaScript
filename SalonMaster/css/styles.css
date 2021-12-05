@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+}
+
+.block-product {
+    position: relative;
+
+    width: 600px;
+    height: 300px;
+
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 2px;
+    margin: 20px;
+
+    background-color: rgba(0, 0, 0, .03);
+}
+
+.block-product > img {
+    position: absolute;
+    right: 0;
+
+    margin: 10px;
+    border-radius: 2px;
+    height: 50px;
+}
+
+.block-product > p {
+    position: absolute;
+    margin: 25px 30px;
+    font-size: 35px;
+}
+
+.block-quantity {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    width: 100px;
+    height: 25px;
+}
+
+.block-quantity .block-segments {
+    display: block;
+    float: left;
+}
+
+.block-quantity .block-segment {
+    float: left;
+
+    margin: 0 2px;
+
+    width: 10px;
+    height: 25px;
+
+    background-color: blue;
+
+    border-radius: 2px;
+}
+
+.block-quantity p {
+    display: block;
+    float: right;
+    line-height: 25px;
+    font-size: 1.1em;
+
+    margin: 0;
+
+}
