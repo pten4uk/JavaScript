@@ -11,13 +11,74 @@ body {
     transition: opacity 1s;
 }
 
-article {
+header {
+    height: 80px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    background-color: rgb(201, 0, 0);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
+nav li {
+    list-style: none;
+    line-height: 80px;
+    font-size: 2em;
+    color: white;
+    transition: font-size .2s;
+}
+
+nav li.selected {
+    border-radius: 15px 15px 0 0;
+    background-color: white;
+    color: black;
+}
+
+article, .search {
     position: relative;
 
     min-width: 500px;
     max-width: 1000px;
     height: 100px;
     margin: 20px;
+
+    opacity: 0;
+    transform: translate(0, -20%);
+    transition: opacity .4s, transform .1s, background-color .1s;
+}
+
+.search {
+    display: block;
+
+    padding: 5px 10px;
+
+    height: 30px;
+    width: 90%;
+
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 2px;
+
+    opacity: 100;
+    transform: none;
+
+    font-size: 1.2em;
+}
+
+.search:focus {
+    border: 1px solid rgba(255, 0, 0, .4);
+}
+
+article.visible {
+    opacity: 100;
+    transform: none;
+}
+
+article.visible:hover {
+    transform: scale(1.002);
 }
 
 .block-product {
@@ -32,6 +93,11 @@ article {
 
     background-color: rgba(0, 0, 0, .03);
     box-shadow: inset 0 0 2px rgba(0, 0, 0, .1);
+    transition: background-color .1s;
+}
+
+.block-product:hover {
+    background-color: rgba(0, 0, 0, .05);
 }
 
 .block-product > img {
@@ -44,9 +110,12 @@ article {
 
 .block-product > p {
     float: left;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+
     margin: 0 15px;
 
-    line-height: 100px;
     width: 250px;
 
     font-size: 35px;
@@ -62,7 +131,7 @@ article {
 }
 
 .block-product .favorites svg {
-    transform: translate(17px, 6px) scale(3.5);
+    transform: translate(17px, 6px) scale(3);
     fill: rgba(32, 70, 255, .8);
 }
 
