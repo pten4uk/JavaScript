@@ -77,9 +77,9 @@ searchInput.addEventListener('keyup', (event) => {
     for (let elem of materials) {
         let p = elem.querySelector('.block-product p');
         if (!p.textContent.includes(key)) {
-            elem.style.opacity = '0';
+            elem.style.display = 'none';
         } else {
-            elem.style.opacity = '100';
+            elem.style.display = 'block';
         }
     }
 

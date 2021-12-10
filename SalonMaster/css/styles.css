@@ -185,16 +185,16 @@ button.plus svg:hover {
 }
 
 .quantity .view-quantity {
+    display: flex;
+    justify-content: end;
+
     position: absolute;
     bottom: 0;
 
     width: 100%;
-
-    float: right;
 }
 .view-quantity .block-segments {
-    display: block;
-    float: left;
+    flex-direction: row-reverse;
 }
 
 .quantity .block-segment {
