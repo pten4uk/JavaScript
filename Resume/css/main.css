@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap');
 
 * {
-    font-family: 'Kanit', Geneva, Verdana sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body {
+    font-family: 'Kanit', Geneva, Verdana sans-serif;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -18,9 +19,16 @@ body {
 }
 
 .blur {
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
     height: 100vh;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     z-index: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: [start] 1fr repeat(10, 1fr) 1fr [end];
+    grid-auto-rows: 50px;
+    grid-column-gap: 10px;
 }

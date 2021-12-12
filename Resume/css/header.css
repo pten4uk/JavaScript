@@ -1,3 +1,8 @@
+header {
+    height: 150px;
+    /*border: 1px solid;*/
+}
+
 .header-black-block {
     position: absolute;
     left: calc(50% - 190px);
@@ -10,7 +15,7 @@
     z-index: 4;
 }
 
-header {
+.header-text {
     position: relative;
     height: 100px;
     line-height: 100px;
@@ -19,13 +24,11 @@ header {
     text-transform: uppercase;
     font-size: 1.5em;
 
-    /*border: 1px solid;*/
-
     color: white;
     z-index: 5;
 }
 
-header > span {
+.header-text > span {
     position: absolute;
     top: 30px;
 
