@@ -1,7 +1,0 @@
-section.skills {
-    grid-column: 2 / 3;
-}
-
-.skills.active {
-    grid-column: 2 / 9;
-}

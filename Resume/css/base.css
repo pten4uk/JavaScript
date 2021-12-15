@@ -1,42 +1,16 @@
 section {
+    display: none;
+    position: relative;
+    grid-column: 4 / 10;
     grid-row: 4 / 14;
 
     font-family: 'Nanum Gothic', sans-serif;
     padding: 30px;
-
-    border: 1px solid rgba(0, 7, 49, .3);
-    background: rgba(204, 204, 204, .2);
-}
-
-section.base {
-    grid-column: 10 / 11;
-}
-
-.active {
-    position: relative;
-
-    border: none;
     background: rgb(213, 213, 213);
 }
 
-.base.active {
-    grid-column: 4 / 10;
-}
-
-.blue-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    height: 90px;
-
-    text-align: center;
-    line-height: 90px;
-    font-size: 1.2em;
-    color: white;
-
-    background: rgb(0, 7, 49);
+section.active {
+    display: block;
 }
 
 .base .photo {
@@ -69,7 +43,18 @@ section.base {
     transform: scale(1.4);
 }
 
-.base .description {
+.blue-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    text-align: center;
+    line-height: 90px;
     font-size: 1.2em;
-    margin-top: 35px;
+    color: white;
+
+    background: rgb(0, 7, 49);
 }
