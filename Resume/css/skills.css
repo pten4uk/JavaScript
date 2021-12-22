@@ -1,0 +1,51 @@
+.skills h3 {
+    text-transform: uppercase;
+}
+
+.block-lang h3 {
+    display: block;
+
+    text-align: center;
+    letter-spacing: 15px;
+}
+
+.block-lang ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    list-style: none;
+    margin-top: 10px;
+
+    height: 40px;
+}
+
+.block-lang li {
+    display: block;
+
+    background: rgba(0, 7, 49, .9);
+    color: white;
+
+    padding: 5px 10px;
+
+    border: 1px solid;
+    border-radius: 10px / 15px;
+}
+
+.backend-frontend {
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: 40px;
+}
+
+.backend-frontend ul {
+    list-style: inside;
+    margin: 5px;
+}
+
+.backend-frontend li {
+    margin-top: 3px;
+}
