@@ -51,7 +51,6 @@
     nav.skills {
         grid-column: 6 / span 3;
         grid-row: 2;
-
     }
 
     nav.info {
@@ -70,17 +69,31 @@
     }
 
     section, section.base {
-        width: 250px;
+        width: 400px;
         grid-column: 5 / 10;
         grid-row: 6 / 20;
     }
 
+    section.skills {
+        grid-row: 6 / 14;
+    }
+
+    section.specialization {
+        grid-row: 6 / 14;
+    }
+
     .base .photo {
-        width: 250px;
-        height: 250px;
+        width: 370px;
+        height: 370px;
     }
 
     .blue-bottom {
         font-size: 1em;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .header-black-block {
+        display: none;
     }
 }
