@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+
+$red: rgba(176, 12, 12, 0.9);
+$white: #dcdcdc;
+$border: 1px solid rgba(0, 0, 0, .3);
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    opacity: 100%;
+    background-color: $white;
+    transition: opacity 1s;
+}
+
+header {
+    height: 80px;
+
+    border-bottom: $border;
+    background-color: $red;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+
+    li {
+        list-style: none;
+        line-height: 80px;
+        font-size: 2em;
+        color: $white;
+        transition: font-size .2s;
+
+        &.selected {
+            border-radius: 15px 15px 0 0;
+            background-color: $white;
+            color: black;
+        }
+    }
+}
+
+main {
+    article {
+        width: 90%;
+        height: 90%;
+        margin: 20px auto;
+        padding: 10px;
+        border: $border;
+
+        table {
+            border-collapse: collapse;
+
+            tr {
+                td {
+                    border: $border;
+                }
+            }
+        }
+    }
+}
