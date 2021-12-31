@@ -46,16 +46,23 @@ nav {
 main {
     article {
         width: 90%;
-        height: 90%;
+        height: 700px;
         margin: 20px auto;
         padding: 10px;
         border: $border;
+        border-left: 10px dotted rgba(0, 0, 0, .5);
+        border-radius: 15px;
 
         table {
+            width: 100%;
             border-collapse: collapse;
 
             tr {
+                &:first-child {
+                    text-align: center;
+                }
                 td {
+                    width: 50px;
                     border: $border;
                 }
             }
